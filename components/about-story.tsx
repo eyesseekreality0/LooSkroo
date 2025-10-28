@@ -34,9 +34,9 @@ export function AboutStory() {
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h2 className="mb-6 font-mono text-4xl font-bold red-glow md:text-5xl">THE JOURNEY</h2>
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-foreground/90">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold font-mono mb-6 red-glow">THE JOURNEY</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             From bedroom producer to film composer, the LooSkroo story is one of relentless creativity and sonic
             innovation.
           </p>
@@ -60,7 +60,7 @@ export function AboutStory() {
                   >
                     {/* Content */}
                     <div className={`flex-1 ${isEven ? "md:text-right" : "md:text-left"}`}>
-                      <div className="inline-block rounded-3xl border border-primary/35 bg-black/70 p-6 text-left text-foreground shadow-[0_0_35px_rgba(255,0,0,0.12)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/60">
+                      <div className="inline-block p-6 bg-card border border-border rounded-lg hover:border-primary/50 transition-all duration-300 red-glow-box">
                         <div className="flex items-center gap-3 mb-3">
                           {isEven ? (
                             <>
@@ -84,12 +84,12 @@ export function AboutStory() {
                             </>
                           )}
                         </div>
-                        <p className="leading-relaxed text-foreground/85">{milestone.description}</p>
+                        <p className="text-muted-foreground leading-relaxed">{milestone.description}</p>
                       </div>
                     </div>
 
                     {/* Center Dot */}
-                    <div className="hidden h-4 w-4 rounded-full border-4 border-background bg-primary pulse-red md:block z-10" />
+                    <div className="hidden md:block w-4 h-4 bg-primary rounded-full border-4 border-background pulse-red z-10" />
 
                     {/* Spacer */}
                     <div className="flex-1" />

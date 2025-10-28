@@ -6,8 +6,9 @@ import { AnimatedCounter } from "./animated-counter"
 
 export function AboutHero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-28 pb-16">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90" />
 
       {/* Red Ambient Glow */}
       <div className="absolute inset-0">
@@ -35,20 +36,20 @@ export function AboutHero() {
 
           {/* Text */}
           <ScrollReveal delay={200} className="animate-slide-in-right">
-            <div className="rounded-3xl border border-primary/35 bg-black/75 p-8 text-foreground shadow-[0_0_45px_rgba(255,0,0,0.14)] backdrop-blur-sm">
+            <div>
               <div className="mb-6">
-                <span className="inline-block rounded-full border border-primary/50 bg-primary/15 px-4 py-2 font-mono text-sm tracking-wider text-primary">
+                <span className="inline-block px-4 py-2 bg-primary/20 border border-primary/50 rounded text-primary text-sm font-mono tracking-wider">
                   THE ARTIST
                 </span>
               </div>
 
-              <h1 className="mb-6 font-mono text-5xl font-bold tracking-wider md:text-6xl">
+              <h1 className="text-5xl md:text-6xl font-bold font-mono mb-6 tracking-wider">
                 <span className="glitch red-glow text-balance">JUSTIN LEWIS</span>
                 <br />
                 <span className="metallic text-balance">AKA LOOSKROO™</span>
               </h1>
 
-              <div className="space-y-4 text-lg leading-relaxed text-foreground">
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   Music producer and score composer forging industrial soundscapes that push the boundaries of hip-hop,
                   electronic, and cinematic music.
@@ -60,24 +61,24 @@ export function AboutHero() {
               </div>
 
               {/* Stats */}
-              <div className="mt-12 grid grid-cols-3 gap-6">
-                <div className="text-center text-foreground">
-                  <div className="mb-2 font-mono text-3xl font-bold text-primary">
+              <div className="grid grid-cols-3 gap-6 mt-12">
+                <div className="text-center">
+                  <div className="text-3xl font-bold font-mono text-primary mb-2">
                     <AnimatedCounter end={10} suffix="+" />
                   </div>
-                  <div className="text-sm text-foreground/85">Years Experience</div>
+                  <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
-                <div className="text-center text-foreground">
-                  <div className="mb-2 font-mono text-3xl font-bold text-primary">
+                <div className="text-center">
+                  <div className="text-3xl font-bold font-mono text-primary mb-2">
                     <AnimatedCounter end={50} suffix="+" />
                   </div>
-                  <div className="text-sm text-foreground/85">Tracks Produced</div>
+                  <div className="text-sm text-muted-foreground">Tracks Produced</div>
                 </div>
-                <div className="text-center text-foreground">
-                  <div className="mb-2 font-mono text-3xl font-bold text-primary">
+                <div className="text-center">
+                  <div className="text-3xl font-bold font-mono text-primary mb-2">
                     <AnimatedCounter end={5} suffix="+" />
                   </div>
-                  <div className="text-sm text-foreground/85">Film Scores</div>
+                  <div className="text-sm text-muted-foreground">Film Scores</div>
                 </div>
               </div>
             </div>
