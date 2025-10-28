@@ -131,39 +131,69 @@ export function BeatsGrid() {
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-mono mb-4 red-glow">AVAILABLE BEATS</h2>
-          <p className="text-muted-foreground">Click to preview. Contact for licensing.</p>
+          <h2 className="mb-4 font-mono text-3xl font-bold red-glow md:text-4xl">AVAILABLE BEATS</h2>
+          <p className="text-foreground">Click to preview. Contact for licensing.</p>
+        </div>
+
+        <div className="mb-12 space-y-6">
+          <h3 className="text-2xl font-mono font-bold text-foreground">Featured Releases</h3>
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="space-y-3 rounded-2xl border border-primary/40 bg-black/70 p-6 shadow-[0_0_35px_rgba(255,0,0,0.14)] backdrop-blur-sm">
+              <h4 className="text-lg font-mono font-semibold text-primary">Run For Your Life - Horror Movie Trailer Music</h4>
+              <iframe
+                src="//www.beatstars.com/embed/track/?id=22596414"
+                width="100%"
+                height="140"
+                style={{ border: "none" }}
+                loading="lazy"
+                title="Run For Your Life - Horror Movie Trailer Music"
+                allow="autoplay"
+              />
+            </div>
+            <div className="space-y-3 rounded-2xl border border-primary/40 bg-black/70 p-6 shadow-[0_0_35px_rgba(255,0,0,0.14)] backdrop-blur-sm">
+              <h4 className="text-lg font-mono font-semibold text-primary">Let Me In (Chris Webby Boom-Bap Type Beat)</h4>
+              <iframe
+                src="//www.beatstars.com/embed/track/?id=22618266"
+                width="100%"
+                height="140"
+                style={{ border: "none" }}
+                loading="lazy"
+                title="Let Me In (Chris Webby Boom-Bap Type Beat)"
+                allow="autoplay"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Beats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {beats.map((beat, index) => (
             <ScrollReveal key={beat.id} delay={index * 100}>
-              <div className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 hover-lift">
+              <div className="group relative overflow-hidden rounded-2xl border border-primary/25 bg-black/75 text-foreground shadow-[0_0_40px_rgba(255,0,0,0.1)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/60">
                 {/* Glow Effect on Hover */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 rounded-lg opacity-0 group-hover:opacity-100 blur transition-opacity duration-300" />
+                <div className="pointer-events-none absolute -inset-0.5 rounded-[22px] bg-gradient-to-r from-primary/0 via-primary/45 to-primary/0 opacity-0 blur group-hover:opacity-100 transition-opacity duration-300" />
 
-                <div className="relative bg-card p-6">
+                <div className="relative rounded-[22px] bg-black/60 p-6 backdrop-blur-sm">
                   {/* Header */}
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold font-mono mb-2 text-balance">{beat.title}</h3>
-                    <p className="text-sm text-muted-foreground">{beat.genre}</p>
+                    <h3 className="mb-2 font-mono text-xl font-bold text-balance">{beat.title}</h3>
+                    <p className="text-sm text-foreground/90">{beat.genre}</p>
                   </div>
 
                   {/* Beat Info */}
                   <div className="flex items-center gap-4 mb-4 text-sm">
                     <div className="flex items-center gap-2">
-                      <span className="text-muted-foreground">BPM:</span>
-                      <span className="text-primary font-mono font-bold">{beat.bpm}</span>
+                      <span className="text-foreground/80">BPM:</span>
+                      <span className="font-mono font-bold text-primary">{beat.bpm}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-muted-foreground">Key:</span>
-                      <span className="text-accent font-mono font-bold">{beat.key}</span>
+                      <span className="text-foreground/80">Key:</span>
+                      <span className="font-mono font-bold text-accent">{beat.key}</span>
                     </div>
                   </div>
 
                   {/* Waveform Visualization (Decorative) */}
-                  <div className="mb-4 h-16 bg-muted/30 rounded flex items-end justify-around gap-1 p-2 overflow-hidden">
+                  <div className="mb-4 flex h-16 items-end justify-around gap-1 overflow-hidden rounded bg-foreground/10 p-2">
                     {Array.from({ length: 40 }).map((_, i) => {
                       const height = Math.random() * 100
                       const isActive = playingId === beat.id
@@ -171,7 +201,7 @@ export function BeatsGrid() {
                         <div
                           key={i}
                           className={`w-1 rounded-full transition-all duration-300 ${
-                            isActive ? "bg-primary animate-pulse" : "bg-muted-foreground/50"
+                            isActive ? "bg-primary animate-pulse" : "bg-foreground/30"
                           }`}
                           style={{
                             height: `${height}%`,
@@ -184,13 +214,13 @@ export function BeatsGrid() {
 
                   {/* Progress Bar */}
                   <div className="mb-4">
-                    <div className="h-1 bg-muted rounded-full overflow-hidden">
+                    <div className="h-1 overflow-hidden rounded-full bg-foreground/10">
                       <div
                         className="h-full bg-primary transition-all duration-100"
                         style={{ width: `${getProgress(beat.id)}%` }}
                       />
                     </div>
-                    <div className="flex justify-between text-xs text-muted-foreground mt-1 font-mono">
+                    <div className="mt-1 flex justify-between font-mono text-xs text-foreground/80">
                       <span>{formatTime(currentTime[beat.id] || 0)}</span>
                       <span>{formatTime(duration[beat.id] || 0)}</span>
                     </div>
@@ -200,7 +230,7 @@ export function BeatsGrid() {
                   <div className="flex items-center gap-3">
                     <button
                       onClick={() => togglePlay(beat.id)}
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground font-bold tracking-wider rounded hover:bg-primary/90 transition-all duration-300 red-glow-box"
+                      className="flex flex-1 items-center justify-center gap-2 rounded-full bg-primary px-4 py-3 font-bold tracking-wider text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
                     >
                       {playingId === beat.id ? (
                         <>
@@ -216,10 +246,10 @@ export function BeatsGrid() {
                     </button>
 
                     <button
-                      className="p-3 bg-secondary text-secondary-foreground rounded hover:bg-secondary/80 transition-colors duration-300 border border-border hover:border-primary"
+                      className="rounded-full border border-secondary/60 bg-secondary px-3 py-3 text-secondary-foreground transition-colors duration-300 hover:border-primary hover:bg-secondary/80"
                       aria-label="Download beat"
                     >
-                      <Download className="w-5 h-5" />
+                      <Download className="h-5 w-5" />
                     </button>
                   </div>
 
@@ -243,14 +273,14 @@ export function BeatsGrid() {
         {/* CTA Section */}
         <ScrollReveal delay={300}>
           <div className="mt-16 text-center">
-            <div className="inline-block p-8 bg-card border border-primary/50 rounded-lg red-glow-box hover-lift">
-              <h3 className="text-2xl font-bold font-mono mb-4 red-glow">NEED A CUSTOM BEAT?</h3>
-              <p className="text-muted-foreground mb-6 max-w-md">
+            <div className="inline-block rounded-3xl border border-primary/45 bg-black/75 p-8 text-foreground shadow-[0_0_45px_rgba(255,0,0,0.16)] backdrop-blur-sm">
+              <h3 className="mb-4 font-mono text-2xl font-bold red-glow">NEED A CUSTOM BEAT?</h3>
+              <p className="mb-6 max-w-md text-foreground">
                 Get a personalized industrial beat or cinematic score crafted specifically for your project.
               </p>
               <a
                 href="/contact"
-                className="inline-block px-8 py-4 bg-primary text-primary-foreground font-bold tracking-wider rounded hover:bg-primary/90 transition-all duration-300"
+                className="inline-block rounded-full bg-primary px-8 py-4 font-bold tracking-wider text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
               >
                 GET IN TOUCH
               </a>
