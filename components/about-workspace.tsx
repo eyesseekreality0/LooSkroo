@@ -3,13 +3,13 @@ export function AboutWorkspace() {
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 text-foreground">
             <h2 className="text-3xl md:text-4xl font-mono font-bold red-glow">INSIDE THE WORKSHOP</h2>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-pretty">
+            <p className="text-base md:text-lg text-foreground/85 leading-relaxed text-pretty">
               Take a quick look inside the creative space where industrial soundscapes are forged. From analog grit to
               digital precision, every beat and score is crafted with intention.
             </p>
-            <p className="text-sm text-muted-foreground/80">
+            <p className="text-sm text-foreground/70">
               🎛️ Glimpse of the studio environment and the energy that goes into every project.
             </p>
           </div>

@@ -39,7 +39,7 @@ export function AboutCredits() {
                   <span className="text-primary font-mono font-bold">{credit.year}</span>
                 </div>
                 <div className="text-accent font-mono text-sm mb-3">{credit.role}</div>
-                <p className="text-muted-foreground leading-relaxed">{credit.description}</p>
+                <p className="text-foreground/80 leading-relaxed">{credit.description}</p>
               </div>
             ))}
           </div>
@@ -55,7 +55,7 @@ export function AboutCredits() {
                 className="p-6 bg-card border border-border rounded-lg text-center hover:border-accent/50 transition-all duration-300"
               >
                 <div className="text-lg font-bold font-mono mb-2 text-balance">{collab.name}</div>
-                <div className="text-sm text-accent font-mono">{collab.type}</div>
+                <div className="text-sm font-mono text-foreground/80">{collab.type}</div>
               </div>
             ))}
           </div>
@@ -65,7 +65,7 @@ export function AboutCredits() {
         <div className="mt-16 text-center">
           <div className="inline-block p-8 bg-card border border-primary/50 rounded-lg red-glow-box">
             <h3 className="text-2xl font-bold font-mono mb-4 red-glow">READY TO COLLABORATE?</h3>
-            <p className="text-muted-foreground mb-6 max-w-md">
+            <p className="text-foreground/80 mb-6 max-w-md">
               Whether you need beats, a film score, or a full production, let's create something unforgettable.
             </p>
             <a

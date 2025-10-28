@@ -5,8 +5,8 @@ export function MusicPresence() {
     <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl space-y-16">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl sm:text-4xl font-bold font-mono red-glow">LISTEN & CONNECT</h2>
-          <p className="mx-auto max-w-2xl text-sm sm:text-base text-muted-foreground">
+          <h2 className="text-3xl sm:text-4xl font-bold font-mono text-foreground red-glow">LISTEN & CONNECT</h2>
+          <p className="mx-auto max-w-2xl text-sm sm:text-base text-foreground/80">
             Immerse yourself in the latest releases and connect with LooSkroo™ across every platform.
           </p>
         </div>
@@ -40,7 +40,7 @@ export function MusicPresence() {
         </div>
 
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="space-y-4 rounded-3xl border border-border bg-black/60 p-6 backdrop-blur-sm">
+          <div className="space-y-4 rounded-3xl border border-primary/50 bg-black/70 p-6 backdrop-blur-sm shadow-[0_0_35px_rgba(255,0,0,0.18)]">
             <h3 className="text-lg font-mono font-bold text-primary">Spotify</h3>
             <iframe
               data-testid="embed-iframe"
@@ -55,19 +55,7 @@ export function MusicPresence() {
             />
           </div>
 
-          <div className="space-y-6 rounded-3xl border border-border bg-black/60 p-6 backdrop-blur-sm">
-            <div className="space-y-2">
-              <h3 className="text-lg font-mono font-bold text-primary">Apple Music</h3>
-              <a
-                href="https://music.apple.com/us/artist/looskroo/1763896870"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center justify-center rounded-full border border-primary/40 bg-primary/10 px-6 py-3 font-mono text-sm font-semibold tracking-wide text-primary transition-transform duration-300 hover:-translate-y-0.5 hover:bg-primary/20"
-              >
-                Listen on Apple Music
-              </a>
-            </div>
-
+          <div className="space-y-6 rounded-3xl border border-primary/40 bg-black/70 p-6 backdrop-blur-sm shadow-[0_0_35px_rgba(255,0,0,0.14)]">
             <div className="space-y-4">
               <h3 className="text-lg font-mono font-bold text-primary">Deezer</h3>
               <iframe
@@ -87,7 +75,7 @@ export function MusicPresence() {
                 href="https://www.tiktok.com/@looskroo"
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/10 px-6 py-3 font-mono text-sm font-semibold tracking-wide text-accent transition-transform duration-300 hover:-translate-y-0.5 hover:bg-accent/20"
+                className="inline-flex items-center justify-center rounded-full border border-accent/40 bg-accent/15 px-6 py-3 font-mono text-sm font-semibold tracking-wide text-accent transition-transform duration-300 hover:-translate-y-0.5 hover:bg-accent/25"
               >
                 Follow on TikTok
               </a>

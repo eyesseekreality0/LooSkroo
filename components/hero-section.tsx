@@ -91,15 +91,15 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[150px] pulse-red" />
       </div>
 
-      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center px-4 text-center">
-        <div className="relative mb-8 w-full max-w-3xl">
-          <div className="relative mx-auto inline-block w-full rounded-3xl border border-primary/30 bg-black/60 p-2 backdrop-blur-sm">
+      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center px-4 text-center">
+        <div className="relative mb-8 w-full max-w-2xl">
+          <div className="relative mx-auto inline-block w-full rounded-3xl border border-primary/40 bg-black/70 p-2 backdrop-blur-sm">
             <Image
               src="/images/looskroo-logo.jpg"
               alt="LooSkroo Logo"
-              width={640}
-              height={220}
-              className="h-auto w-full max-w-full rounded-2xl border border-primary/40 bg-black/60 object-contain p-4 shadow-[0_0_45px_rgba(255,0,0,0.28)]"
+              width={480}
+              height={180}
+              className="h-auto w-full max-w-full rounded-2xl border border-primary/50 bg-black/70 object-contain p-3 shadow-[0_0_35px_rgba(255,0,0,0.32)]"
               priority
             />
             <div
@@ -117,40 +117,34 @@ export function HeroSection() {
           </div>
         </div>
 
-        <h1 className="mb-6 font-mono text-3xl font-bold tracking-wider text-balance sm:text-5xl lg:text-6xl">
+        <h1 className="mb-6 font-mono text-3xl font-extrabold tracking-[0.35em] text-balance text-foreground sm:text-5xl lg:text-6xl">
           <span className="glitch red-glow text-balance">FORGED IN SOUND.</span>
           <br />
           <span className="metallic text-balance">BUILT TO BREAK LIMITS.</span>
         </h1>
 
-        <p className="mb-10 max-w-2xl text-pretty text-base tracking-wide text-muted-foreground sm:text-lg md:text-xl">
+        <p className="mb-10 max-w-2xl text-pretty text-base tracking-wide text-foreground/85 sm:text-lg md:text-xl">
           Justin Lewis | Music Producer & Score Composer
         </p>
 
         <div className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href="/beats"
-            className="w-full max-w-xs rounded border border-primary/60 bg-primary px-8 py-4 font-bold tracking-wider text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+            className="w-full max-w-xs rounded border border-primary bg-primary px-8 py-4 font-bold tracking-[0.25em] text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
           >
             EXPLORE BEATS
           </a>
           <a
             href="/contact"
-            className="w-full max-w-xs rounded border border-border bg-secondary px-8 py-4 font-bold tracking-wider text-secondary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary"
+            className="w-full max-w-xs rounded border border-primary/60 bg-secondary px-8 py-4 font-bold tracking-[0.25em] text-secondary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary"
           >
             BOOK A SESSION
           </a>
         </div>
 
-        <div className="mt-14 text-sm text-muted-foreground">
-          <p className="mb-2 tracking-[0.3em] text-xs text-primary/80">FILM CREDITS</p>
-          <p className="font-mono text-pretty text-base">"Unknown Strangers" (2022) • "The Bogman" (2023)</p>
-        </div>
-      </div>
-
-      <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2">
-        <div className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-primary/80 bg-black/40 p-2">
-          <div className="h-3 w-1 animate-bounce rounded-full bg-primary" />
+        <div className="mt-14 text-sm text-foreground/80">
+          <p className="mb-2 tracking-[0.3em] text-xs text-primary">FILM CREDITS</p>
+          <p className="font-mono text-pretty text-base text-foreground">"Unknown Strangers" (2022) • "The Bogman" (2023)</p>
         </div>
       </div>
     </section>

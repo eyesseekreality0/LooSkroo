@@ -48,7 +48,7 @@ export function AboutHero() {
                 <span className="metallic text-balance">AKA LOOSKROO™</span>
               </h1>
 
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-4 text-lg text-foreground/85 leading-relaxed">
                 <p>
                   Music producer and score composer forging industrial soundscapes that push the boundaries of hip-hop,
                   electronic, and cinematic music.
@@ -61,23 +61,23 @@ export function AboutHero() {
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 mt-12">
-                <div className="text-center">
+                <div className="text-center text-foreground/85">
                   <div className="text-3xl font-bold font-mono text-primary mb-2">
                     <AnimatedCounter end={10} suffix="+" />
                   </div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-sm text-foreground/75">Years Experience</div>
                 </div>
-                <div className="text-center">
+                <div className="text-center text-foreground/85">
                   <div className="text-3xl font-bold font-mono text-primary mb-2">
                     <AnimatedCounter end={50} suffix="+" />
                   </div>
-                  <div className="text-sm text-muted-foreground">Tracks Produced</div>
+                  <div className="text-sm text-foreground/75">Tracks Produced</div>
                 </div>
-                <div className="text-center">
+                <div className="text-center text-foreground/85">
                   <div className="text-3xl font-bold font-mono text-primary mb-2">
                     <AnimatedCounter end={5} suffix="+" />
                   </div>
-                  <div className="text-sm text-muted-foreground">Film Scores</div>
+                  <div className="text-sm text-foreground/75">Film Scores</div>
                 </div>
               </div>
             </div>

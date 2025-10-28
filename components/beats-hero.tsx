@@ -25,7 +25,7 @@ export function BeatsHero() {
           <span className="metallic text-balance">CINEMATIC SCORES.</span>
         </h1>
 
-        <p className="mx-auto max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg md:text-xl">
+        <p className="mx-auto max-w-2xl text-pretty text-base leading-relaxed text-foreground/85 sm:text-lg md:text-xl">
           From hard-hitting industrial tracks to atmospheric film scores, each beat is forged with precision and raw
           energy.
         </p>

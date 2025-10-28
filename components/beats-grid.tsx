@@ -132,7 +132,7 @@ export function BeatsGrid() {
         {/* Section Header */}
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-mono mb-4 red-glow">AVAILABLE BEATS</h2>
-          <p className="text-muted-foreground">Click to preview. Contact for licensing.</p>
+          <p className="text-foreground/80">Click to preview. Contact for licensing.</p>
         </div>
 
         <div className="mb-12 space-y-6">
@@ -169,7 +169,7 @@ export function BeatsGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {beats.map((beat, index) => (
             <ScrollReveal key={beat.id} delay={index * 100}>
-              <div className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 hover-lift">
+              <div className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 hover-lift text-foreground">
                 {/* Glow Effect on Hover */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/0 via-primary/50 to-primary/0 rounded-lg opacity-0 group-hover:opacity-100 blur transition-opacity duration-300" />
 
@@ -177,17 +177,17 @@ export function BeatsGrid() {
                   {/* Header */}
                   <div className="mb-4">
                     <h3 className="text-xl font-bold font-mono mb-2 text-balance">{beat.title}</h3>
-                    <p className="text-sm text-muted-foreground">{beat.genre}</p>
+                    <p className="text-sm text-foreground/75">{beat.genre}</p>
                   </div>
 
                   {/* Beat Info */}
                   <div className="flex items-center gap-4 mb-4 text-sm">
                     <div className="flex items-center gap-2">
-                      <span className="text-muted-foreground">BPM:</span>
+                      <span className="text-foreground/70">BPM:</span>
                       <span className="text-primary font-mono font-bold">{beat.bpm}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-muted-foreground">Key:</span>
+                      <span className="text-foreground/70">Key:</span>
                       <span className="text-accent font-mono font-bold">{beat.key}</span>
                     </div>
                   </div>
@@ -220,7 +220,7 @@ export function BeatsGrid() {
                         style={{ width: `${getProgress(beat.id)}%` }}
                       />
                     </div>
-                    <div className="flex justify-between text-xs text-muted-foreground mt-1 font-mono">
+                    <div className="flex justify-between text-xs text-foreground/70 mt-1 font-mono">
                       <span>{formatTime(currentTime[beat.id] || 0)}</span>
                       <span>{formatTime(duration[beat.id] || 0)}</span>
                     </div>
@@ -273,9 +273,9 @@ export function BeatsGrid() {
         {/* CTA Section */}
         <ScrollReveal delay={300}>
           <div className="mt-16 text-center">
-            <div className="inline-block p-8 bg-card border border-primary/50 rounded-lg red-glow-box hover-lift">
+            <div className="inline-block p-8 bg-card border border-primary/50 rounded-lg red-glow-box hover-lift text-foreground">
               <h3 className="text-2xl font-bold font-mono mb-4 red-glow">NEED A CUSTOM BEAT?</h3>
-              <p className="text-muted-foreground mb-6 max-w-md">
+              <p className="text-foreground/80 mb-6 max-w-md">
                 Get a personalized industrial beat or cinematic score crafted specifically for your project.
               </p>
               <a

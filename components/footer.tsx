@@ -13,21 +13,21 @@ export function Footer() {
   }
 
   return (
-    <footer className="relative border-t border-border bg-black/50 backdrop-blur-sm">
+    <footer className="relative border-t border-border bg-black/60 backdrop-blur-sm text-foreground">
       {/* Animated Red Beam */}
       <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse" />
 
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
-          <p className="text-sm text-muted-foreground font-mono">
+          <p className="text-sm text-foreground/80 font-mono">
             © 2025 <span className="text-primary">LooSkroo™</span> — Forged in Sound.
           </p>
 
           {/* Scroll to Top */}
           <button
             onClick={scrollToTop}
-            className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
+            className="group flex items-center gap-2 text-sm text-foreground/80 hover:text-primary transition-colors duration-300"
             aria-label="Scroll to top"
           >
             <span className="font-mono tracking-wider">BACK TO TOP</span>
