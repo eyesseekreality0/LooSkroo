@@ -135,6 +135,36 @@ export function BeatsGrid() {
           <p className="text-muted-foreground">Click to preview. Contact for licensing.</p>
         </div>
 
+        <div className="mb-12 space-y-6">
+          <h3 className="text-2xl font-mono font-bold text-primary">Featured Releases</h3>
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="space-y-3 rounded-xl border border-primary/40 bg-black/40 p-6 shadow-[0_0_30px_rgba(255,0,0,0.1)]">
+              <h4 className="text-lg font-mono font-semibold text-primary/90">Run For Your Life - Horror Movie Trailer Music</h4>
+              <iframe
+                src="//www.beatstars.com/embed/track/?id=22596414"
+                width="100%"
+                height="140"
+                style={{ border: "none" }}
+                loading="lazy"
+                title="Run For Your Life - Horror Movie Trailer Music"
+                allow="autoplay"
+              />
+            </div>
+            <div className="space-y-3 rounded-xl border border-primary/40 bg-black/40 p-6 shadow-[0_0_30px_rgba(255,0,0,0.1)]">
+              <h4 className="text-lg font-mono font-semibold text-primary/90">Let Me In (Chris Webby Boom-Bap Type Beat)</h4>
+              <iframe
+                src="//www.beatstars.com/embed/track/?id=22618266"
+                width="100%"
+                height="140"
+                style={{ border: "none" }}
+                loading="lazy"
+                title="Let Me In (Chris Webby Boom-Bap Type Beat)"
+                allow="autoplay"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Beats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {beats.map((beat, index) => (

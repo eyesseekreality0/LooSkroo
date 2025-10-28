@@ -23,7 +23,7 @@ const collaborations = [
 
 export function AboutCredits() {
   return (
-    <section className="relative py-20 px-4 bg-black/30">
+    <section className="relative py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Film Credits */}
         <div className="mb-16">

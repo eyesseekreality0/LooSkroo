@@ -26,16 +26,16 @@ export function VideoSection() {
       <div className="container mx-auto max-w-6xl">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold font-mono mb-4 red-glow">SONIC FORGE</h2>
-          <div className="w-24 h-1 bg-primary mx-auto" />
+          <h2 className="text-4xl md:text-5xl font-bold font-mono mb-4 red-glow">FEATURED VISUAL</h2>
+          <div className="mx-auto h-1 w-24 bg-primary" />
         </div>
 
         {/* Video Container */}
-        <div className="relative group">
+        <div className="group relative">
           {/* Red Glow Frame */}
           <div className="absolute -inset-4 bg-gradient-to-r from-primary/50 via-primary/30 to-primary/50 rounded-lg blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-300" />
 
-          <div className="relative bg-black rounded-lg overflow-hidden border-2 border-primary/50 red-glow-box">
+          <div className="relative overflow-hidden rounded-lg border-2 border-primary/50 bg-black/60 backdrop-blur-sm shadow-[0_0_35px_rgba(255,0,0,0.2)]">
             {/* Facebook Video Embed */}
             <div className="relative aspect-video">
               <iframe
@@ -54,7 +54,7 @@ export function VideoSection() {
             {/* Mute Toggle Button */}
             <button
               onClick={() => setIsMuted(!isMuted)}
-              className="absolute bottom-4 right-4 p-3 bg-black/80 backdrop-blur-sm border border-primary/50 rounded-full hover:bg-primary/20 transition-all duration-300 z-10"
+              className="absolute bottom-4 right-4 p-3 bg-black/60 backdrop-blur-sm border border-primary/50 rounded-full hover:bg-primary/20 transition-all duration-300 z-10"
               aria-label={isMuted ? "Unmute" : "Mute"}
             >
               {isMuted ? <VolumeXIcon /> : <Volume2Icon />}

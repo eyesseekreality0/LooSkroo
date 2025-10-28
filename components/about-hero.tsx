@@ -6,9 +6,8 @@ import { AnimatedCounter } from "./animated-counter"
 
 export function AboutHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative flex min-h-screen items-center justify-center overflow-hidden pt-28 pb-16">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90" />
 
       {/* Red Ambient Glow */}
       <div className="absolute inset-0">

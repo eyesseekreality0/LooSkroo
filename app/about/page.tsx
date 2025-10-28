@@ -2,6 +2,7 @@ import { Navigation } from "@/components/navigation"
 import { AboutHero } from "@/components/about-hero"
 import { AboutStory } from "@/components/about-story"
 import { AboutCredits } from "@/components/about-credits"
+import { AboutWorkspace } from "@/components/about-workspace"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
@@ -15,6 +16,7 @@ export default function AboutPage() {
       <Navigation />
       <AboutHero />
       <AboutStory />
+      <AboutWorkspace />
       <AboutCredits />
       <Footer />
     </main>

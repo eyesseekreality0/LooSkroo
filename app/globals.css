@@ -154,7 +154,12 @@
 
 /* Custom Grunge Effects */
 body {
-  background: linear-gradient(180deg, hsl(0 0% 6%) 0%, hsl(0 0% 10%) 100%);
+  background: #050505;
+  background-image: radial-gradient(circle at 15% 20%, rgba(255, 45, 45, 0.18), transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(120, 0, 0, 0.25), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(255, 45, 45, 0.12), transparent 55%);
+  background-size: 200% 200%;
+  animation: crimson-shift 22s ease-in-out infinite;
   position: relative;
   overflow-x: hidden;
 }
@@ -162,32 +167,35 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-image: repeating-linear-gradient(
-    0deg,
+    90deg,
     transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.03) 2px,
-    rgba(0, 0, 0, 0.03) 4px
+    transparent 3px,
+    rgba(255, 255, 255, 0.015) 3px,
+    rgba(255, 255, 255, 0.015) 6px
   );
   pointer-events: none;
-  z-index: 9999;
-  opacity: 0.3;
+  z-index: -1;
 }
 
 body::after {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 0%, rgba(0, 0, 0, 0.55) 100%);
   pointer-events: none;
-  z-index: 1;
+  z-index: -1;
+}
+
+@keyframes crimson-shift {
+  0%,
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%, 50% 0%;
+  }
 }
 
 /* Glitch Text Effect */
