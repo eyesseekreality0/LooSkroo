@@ -2,10 +2,9 @@
 
 export function BeatsHero() {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-16">
+    <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden pt-28 pb-16">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90" />
-
+      
       {/* Red Ambient Glow */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] pulse-red" />
@@ -13,20 +12,20 @@ export function BeatsHero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
         <div className="mb-6">
           <span className="inline-block px-4 py-2 bg-primary/20 border border-primary/50 rounded text-primary text-sm font-mono tracking-wider">
             MUSIC PRODUCTION
           </span>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-bold font-mono mb-6 tracking-wider">
+        <h1 className="mb-6 font-mono text-4xl font-bold tracking-wider text-balance sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="glitch red-glow text-balance">INDUSTRIAL BEATS.</span>
           <br />
           <span className="metallic text-balance">CINEMATIC SCORES.</span>
         </h1>
 
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className="mx-auto max-w-2xl text-pretty text-base leading-relaxed text-foreground/85 sm:text-lg md:text-xl">
           From hard-hitting industrial tracks to atmospheric film scores, each beat is forged with precision and raw
           energy.
         </p>

@@ -29,21 +29,24 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/80 bg-black/80 backdrop-blur-lg">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold font-mono tracking-wider red-glow">
+          <Link
+            href="/"
+            className="text-lg font-semibold font-mono tracking-[0.35em] text-foreground red-glow drop-shadow-[0_0_12px_rgba(255,0,0,0.65)]"
+          >
             LOOSKROO™
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden items-center gap-8 md:flex">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium tracking-wider text-muted-foreground hover:text-primary transition-colors duration-300 relative group"
+                className="relative text-sm font-semibold tracking-[0.3em] text-foreground transition-colors duration-300 hover:text-primary group"
               >
                 {link.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
@@ -54,7 +57,7 @@ export function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="text-foreground transition-colors hover:text-primary md:hidden"
           >
             {isOpen ? <XIcon /> : <MenuIcon />}
           </button>
@@ -68,7 +71,7 @@ export function Navigation() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-3 text-sm font-medium tracking-wider text-muted-foreground hover:text-primary transition-colors"
+                className="block py-3 text-sm font-semibold tracking-[0.3em] text-foreground transition-colors hover:text-primary"
               >
                 {link.label}
               </Link>
