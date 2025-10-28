@@ -251,23 +251,6 @@ body::after {
   -webkit-text-fill-color: transparent;
 }
 
-/* Spark Animation */
-@keyframes spark {
-  0%,
-  100% {
-    opacity: 0;
-    transform: translateY(0) scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-20px) scale(1);
-  }
-}
-
-.spark {
-  animation: spark 2s infinite;
-}
-
 /* Pulse Animation */
 @keyframes pulse-red {
   0%,
